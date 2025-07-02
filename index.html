@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pesan Kartu Nama</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      padding: 16px;
+    }
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      max-width: 480px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .deskripsi {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #d35400;
+      background: #fff6e5;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    .note b {
+      display: block;
+      font-size: 16px;
+      color: #c0392b;
+      margin-bottom: 6px;
+    }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1ebe5d;
+    }
+    small {
+      display: block;
+      margin-top: 4px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <h2>Pesan "Kartu Nama"</h2>
+      <div class="deskripsi">
+        Kartu nama adalah potongan kartu kecil (biasanya berukuran 90×55 mm) yang biasanya berisi nama lengkap atau panggilan, alamat rumah, alamat kantor, nomer handphone, id sosmed dll dipakai untuk memperkenalkan diri kepada orang lain atau rekan bisnis yang mungkin sewaktu waktu ingin menghubungi kita. Kartu nama juga dapat dipakai sebagai sarana untuk memperluas pergaulan dan jaringan bisnis. Kartu nama dari kami dibuat dengan berbagai pilihan macam bahan kertas dari yang berbahan dasar standar sampai berbahan dasar sintesis.
+      </div>
+
+      <label>Nama Anda</label>
+      <input type="text" id="nama" required>
+
+      <label>Nomor WhatsApp Anda</label>
+      <input type="tel" id="nowa" pattern="[0-9]+" required>
+
+      <label>Ukuran Kartu Nama</label>
+      <select id="ukuran">
+        <option value="9 x 5,4 cm">9 x 5,4 cm</option>
+      </select>
+
+      <label>Orientasi Print / Desain</label>
+      <select id="orientasi">
+        <option value="Landscape">Landscape</option>
+        <option value="Potrait">Potrait</option>
+      </select>
+
+      <label>Bahan Kertas</label>
+      <select id="bahan">
+        <option value="Art Paper 260 gr">Art Paper 260 gr (Umumnya)</option>
+        <option value="Art Paper 310 gr">Art Paper 310 gr (Umumnya)</option>
+        <option value="Art Paper 360 gr">Art Paper 360 gr (Umumnya)</option>
+        <option value="Matte Paper 150 gr">Matte Paper 150 gr</option>
+        <option value="Matte Paper 200 gr">Matte Paper 200 gr</option>
+        <option value="Matte Paper 250 gr">Matte Paper 250 gr (Umumnya)</option>
+        <option value="Matte Paper 300 gr">Matte Paper 300 gr (Umumnya)</option>
+        <option value="Copenhagen White 250 gr">Copenhagen White 250 gr</option>
+        <option value="Jasmine White 230 gr">Jasmine White 230 gr</option>
+        <option value="Florida 240 gr">Florida 240 gr</option>
+        <option value="Ice Land 240 gr">Ice Land 240 gr</option>
+        <option value="Concord 270 gr">Concord 270 gr</option>
+        <option value="Linen 240 gr">Linen 240 gr</option>
+        <option value="Ivory 260 gr">Ivory 260 gr</option>
+        <option value="Ivory 310 gr">Ivory 310 gr</option>
+        <option value="Ivory 350 gr">Ivory 350 gr</option>
+        <option value="Blushwhite 300 gr">Blushwhite 300 gr (Umumnya)</option>
+        <option value="BC Manila 230 gr">BC Manila 230 gr (Umumnya)</option>
+        <option value="B-Craft 200 gr">B-Craft 200 gr</option>
+        <option value="B-Craft 300 gr">B-Craft 300 gr</option>
+        <option value="Java 240 gr">Java 240 gr</option>
+        <option value="Country 260 gr">Country 260 gr</option>
+        <option value="Egg Shell 260 gr">Egg Shell 260 gr</option>
+        <option value="Ice Gold 120 gr">Ice Gold 120 gr</option>
+        <option value="Ice Gold 300 gr">Ice Gold 300 gr</option>
+        <option value="Ice Silver 260 gr">Ice Silver 260 gr</option>
+        <option value="Pearl Gold 260 gr">Pearl Gold 260 gr</option>
+        <option value="Raster 220 gr">Raster 220 gr</option>
+        <option value="Rives Ice White 250 gr">Rives Ice White 250 gr</option>
+        <option value="Rives Tradition Ice White 250 gr">Rives Tradition Ice White 250 gr</option>
+        <option value="Rives Tradition 250 gr">Rives Tradition 250 gr</option>
+        <option value="Transparency Tipis 150 gr">Transparency Tipis 150 gr</option>
+        <option value="Transparency Tebal 260 gr">Transparency Tebal 260 gr</option>
+        <option value="Uncoated Smooth 300 gr">Uncoated Smooth 300 gr</option>
+        <option value="Uncoated Vellum 300 gr">Uncoated Vellum 300 gr</option>
+        <option value="Uncoated Felt 300 gr">Uncoated Felt 300 gr</option>
+        <option value="Via Linen 300 gr">Via Linen 300 gr</option>
+        <option value="Canvas Paper 210 gr">Canvas Paper 210 gr</option>
+        <option value="Photo Luster 260 gr">Photo Luster 260 gr</option>
+        <option value="Coronado 270 gr">Coronado 270 gr</option>
+      </select>
+
+      <label>Sisi Cetak</label>
+      <select id="sisi">
+        <option value="1 Sisi">1 Sisi ( Depan Saja )</option>
+        <option value="2 Sisi">2 Sisi ( Depan Belakang )</option>
+      </select>
+
+      <label>Dengan Laminasi</label>
+      <select id="laminasi">
+        <option value="Tanpa Laminasi">Tanpa Laminasi</option>
+        <option value="Glossy">Laminasi Glossy ( Mengkilap )</option>
+        <option value="Doff">Laminasi Matte ( Doff )</option>
+      </select>
+
+      <label>Dengan Pingul ( Sudut Tumpul / Rounded )</label>
+      <select id="pingul">
+        <option value="1 Sudut">1 Sudut</option>
+        <option value="2 Sudut">2 Sudut</option>
+        <option value="3 Sudut">3 Sudut</option>
+        <option value="4 Sudut">4 Sudut ( Semua Sudut )</option>
+      </select>
+
+      <label>Jumlah Box</label>
+      <input type="number" id="jumlah" min="1" required>
+      <small>1 Box = 100 lembar</small>
+
+      <label>Kapan Dibutuhkan?</label>
+      <input type="date" id="tanggal" required>
+
+      <label>Pada Jam Berapa?</label>
+      <input type="time" id="jam" required>
+
+      <label>Catatan Khusus untuk Admin Kami</label>
+      <textarea id="catatan" rows="4"></textarea>
+
+      <div class="note">
+        <b>Penting !</b>
+        Estimasi Dateline Yang Anda Atur Bisa Berubah Sesuai Kondisi Antrian, Anda Bisa Atur Negosiasi Waktu Dateline Dengan Admin Kami. <b>"Pastikan File Anda Ready / Siap Print"</b>
+      </div>
+
+      <button type="submit">Cek Harga ke Admin Metropolis Print</button>
+    </form>
+  </div>
+
+  <script>
+    function formatTanggalIndo(tanggalInput) {
+      const bulanIndo = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+      const hariIndo = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+      const dateObj = new Date(tanggalInput);
+      const hari = hariIndo[dateObj.getDay()];
+      const tanggal = dateObj.getDate();
+      const bulan = bulanIndo[dateObj.getMonth()];
+      const tahun = dateObj.getFullYear();
+      return `${hari}, ${tanggal} ${bulan} ${tahun}`;
+    }
+
+    function sendToWhatsApp() {
+      const adminWa = "6282335222268";
+      const nama = document.getElementById("nama").value;
+      const nowa = document.getElementById("nowa").value;
+      const ukuran = document.getElementById("ukuran").value;
+      const orientasi = document.getElementById("orientasi").value;
+      const bahan = document.getElementById("bahan").value;
+      const sisi = document.getElementById("sisi").value;
+      const laminasi = document.getElementById("laminasi").value;
+      const pingul = document.getElementById("pingul").value;
+      const jumlah = document.getElementById("jumlah").value;
+      const tanggal = formatTanggalIndo(document.getElementById("tanggal").value);
+      const jam = document.getElementById("jam").value;
+      const catatan = document.getElementById("catatan").value || "-";
+
+      const pesan =
+        `📌 Pemesanan Kartu Nama\n\n` +
+        `👤 Nama: ${nama}\n` +
+        `📱 No. WA: ${nowa}\n` +
+        `📐 Ukuran: ${ukuran}\n` +
+        `📏 Orientasi: ${orientasi}\n` +
+        `📄 Bahan: ${bahan}\n` +
+        `🖨️ Sisi Cetak: ${sisi}\n` +
+        `🎨 Laminasi: ${laminasi}\n` +
+        `🔘 Pingul: ${pingul}\n` +
+        `📦 Jumlah Box: ${jumlah}\n` +
+        `🗓️ Tanggal: ${tanggal}\n` +
+        `⏰ Jam: ${jam}\n` +
+        `📝 Catatan: ${catatan}`;
+
+      const url = `https://wa.me/${adminWa}?text=${encodeURIComponent(pesan)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
